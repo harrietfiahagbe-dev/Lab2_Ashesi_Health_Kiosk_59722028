@@ -10,6 +10,10 @@ public class HealthKiosk {
         //Creating Scanner object for user input
         Scanner input = new Scanner(System.in);
 
+        //A welcome line for the users
+        System.out.println("Welcome to the Ashesi Health Kiosk!");
+
+
 
     }
 
