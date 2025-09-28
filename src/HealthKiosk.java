@@ -12,6 +12,7 @@ public class HealthKiosk {
 
         //A welcome line for the users
         System.out.println("Welcome to the Ashesi Health Kiosk!");
+        ;
 
 
 
