@@ -38,6 +38,7 @@ public class HealthKiosk {
         //Asking users to enter their service code
         System.out.println("Please enter your preferred service code (P,L,T,C):  ");
         service_code = input.next().charAt(0);
+
         //Changing all input to uppercase
         service_code = Character.toUpperCase(service_code);
 
@@ -80,17 +81,18 @@ public class HealthKiosk {
                     System.out.print("Please enter your weight in kilograms: ");
                     weight = input.nextDouble();
 
-                    //
+                    //Asking for the height of the user
                     System.out.print("Please enter your height in meters: ");
                     height = input.nextDouble();
 
                     //Calculating the BMI
                     body_mass = weight / Math.pow(height,2);
                     body_mass = Math.round(body_mass * 10) / 10.0;
+
                     //System.out.println("BMI: " + body_mass);
                     final_body_mass = (int) body_mass;
 
-                    //
+                    //Laying out the conditions for the body mass
                     if (body_mass < 18.5){
                        body_mass_fb = "Underweight";
                     }else if (body_mass>= 18.5 && body_mass <=24.9){
@@ -100,11 +102,11 @@ public class HealthKiosk {
                     }else if(body_mass >= 30.0){
                     body_mass_fb = "Obese";
                     }
-                    //
+                    //Printing the BMI and BMI type of the user
                     System.out.println("This is your BMI: " +body_mass +  " You are: " + body_mass_fb);
                     break;
                 case 2:
-                    //
+                    //Asking the user for their dosage
                     System.out.print("Please enter your required dosage (mg): ");
                     dosage = input.nextDouble();
 
@@ -112,19 +114,23 @@ public class HealthKiosk {
                     double num_of_tablets = dosage/250;
                     double final_tablets = Math.ceil(num_of_tablets);
                     final_tablets = (int) final_tablets;
-                    //
+
+                    //Printing out the final dosage the user has to take in
                     System.out.println("This is how much you have to take: " + final_tablets + "mg");
                     break;
                 case 3:
-                    //
+                    //Asking the user for the angle in degree
                     System.out.print("Please enter an angle in degrees: ");
                     degrees = input.nextDouble();
-                    //
+
+                    //Converting the angle in degree to radians
                     double angle_radians = Math.toRadians(degrees);
-                    //
+
+                    //Converting the angle to sin and cos
                     double angle_sin = Math.sin(angle_radians);
                     double angle_cos = Math.cos(angle_radians);
-                    //
+
+                    //Rounding up the angles gotten in three decimals places
                     angle_sin = Math.round(angle_sin  * 1000) / 1000.0;
                     angle_cos = Math.round(angle_cos * 1000) / 1000.0;
                     System.out.println("This is your angle in sin: " + angle_sin + " radian.");
@@ -139,14 +145,16 @@ public class HealthKiosk {
 
             }
             //Creating ID for user
-            //
+            //Generating a random character for the user
             char randomLetter = (char)('A' + (int)(Math.random() * 26));
-            //
+
+            //Generating the numbers for the ID for the user
             num_1 = 3 + (int)(Math.random() * 7);
             num_2 =  3 + (int)(Math.random() * 7);
             num_3 = 3 + (int)(Math.random() * 7);
             num_4 = 3 + (int)(Math.random() * 7);
-            //Concating all the values, we use the "" to force string concatenation
+
+            //Concatenating all the values, we use the "" to force string concatenation
             String your_id = "" + randomLetter + num_1 + num_2 + num_3 + num_4;
 
             //Checking for the conditions highlighted
