@@ -186,7 +186,7 @@ public class HealthKiosk {
 
             //Printing the whole summary of the user's information
 
-            if (service_code == 'T' && option_t == 1){
+            if (service_code == 'T'){
                 String summary = "Summary: " + service_name + " | ID= " + your_id + " | BMI=" + body_mass +  " | Code= " + final_code;
                 System.out.println(summary);
             }
