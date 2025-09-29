@@ -128,14 +128,11 @@ public class HealthKiosk {
                     angle_sin = Math.round(angle_sin  * 1000) / 1000.0;
                     angle_cos = Math.round(angle_cos * 1000) / 1000.0;
                     System.out.println("This is your angle in sin: " + angle_sin + " radian.");
-                    System.out.println("This iis your angle in cos: " + angle_cos + " radian.");
+                    System.out.println("This is your angle in cos: " + angle_cos + " radian.");
                     break;
                 default:
                     System.out.println("Invalid input.");
                 }
-
-
-
 
 
 
